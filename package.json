@@ -1,0 +1,35 @@
+{
+  "name": "pebble-connection-vibes",
+  "description": "Easily vibe when connection to Pebble app is lost",
+  "author": "David Morgan",
+  "license": "ISC",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spitemare/pebble-connection-vibes.git"
+  },
+  "files": [
+    "dist.zip"
+  ],
+  "keywords": [
+    "pebble-package"
+  ],
+  "dependencies": {
+    "pebble-events": "^1.1.0"
+  },
+  "pebble": {
+    "capabilities": [
+      "health"
+    ],
+    "projectType": "package",
+    "sdkVersion": "3",
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk"
+    ],
+    "resources": {
+      "media": []
+    }
+  }
+}
