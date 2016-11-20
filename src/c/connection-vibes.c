@@ -18,7 +18,7 @@ static EventHandle s_connection_service_event_handle;
 static void prv_health_event_handler(HealthEventType event, void *context) {
     if (event == HealthEventSignificantUpdate) {
         prv_health_event_handler(HealthEventSleepUpdate, context);
-    } else if (event == HealthEventSleepUpdate) {
+    } else if (event == HealthEventSleepUpdate || (event == HealthEventMovementUpdate && s_sleeping)) {
         HealthActivityMask mask = health_service_peek_current_activities();
         s_sleeping = (mask & HealthActivitySleep) || (mask & HealthActivityRestfulSleep);
     }
