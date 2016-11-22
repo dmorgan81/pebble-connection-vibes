@@ -3,7 +3,7 @@
   "description": "Easily vibe when connection to Pebble app is lost",
   "author": "David Morgan",
   "license": "ISC",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Spitemare/pebble-connection-vibes.git"

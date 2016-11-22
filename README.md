@@ -59,3 +59,7 @@ After calling `connection_vibes_init()` you may set additional options such as v
 On platforms that support Pebble Health, pebble-connection-vibes can subscribe to health events and detect when the user is asleep. Vibes will happen only if the user is awake. This avoids awkward vibes at 0200 that could awaken a user. To enable this, just call `connection_vibes_enable_health(true)` sometime after calling `connection_vibes_init()`.
 
 Pebble Health integration is turned off by default so apps and watchfaces that don't want to integrate with Pebble Health won't get the nag screen thrown up by the watch if the user doesn't have Pebble Health enabled.
+
+# Note on Quiet Time
+
+Starting with Pebble SDK 4.3 the current state of the system quiet time is available. pebble-connection-vibes will respect this on every platform but aplite. On aplite `quiet_time_is_active()` is actually a `#define` that aways evaluates to false.

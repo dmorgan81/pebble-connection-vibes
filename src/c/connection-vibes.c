@@ -26,6 +26,8 @@ static void prv_health_event_handler(HealthEventType event, void *context) {
 #endif
 
 static void prv_vibe(void) {
+    if (quiet_time_is_active()) return;
+
     if (s_segments != NULL) {
         VibePattern pattern = {
             .durations = s_segments,
